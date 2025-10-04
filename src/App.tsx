@@ -1,10 +1,12 @@
 import './styles/global.css'
 import './styles/tema.css'
 
+import {Cabecalho} from './componentes/Cabecalho.tsx'
+
 export function App(){
     return (
         <>
-            <h1>Olá Mundo</h1>
+            <Cabecalho />
             <p>
                 Exemplo de paragrafo
             </p>
