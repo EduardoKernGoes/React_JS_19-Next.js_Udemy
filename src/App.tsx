@@ -2,11 +2,14 @@ import './styles/global.css'
 import './styles/tema.css'
 
 import {Cabecalho} from './componentes/Cabecalho.tsx'
+import { TimerIcon } from 'lucide-react'
 
 export function App(){
     return (
         <>
-            <Cabecalho />
+            <Cabecalho>
+                Olá Mundo<button><TimerIcon /></button>
+            </Cabecalho>
             <p>
                 Exemplo de paragrafo
             </p>
@@ -15,4 +18,4 @@ export function App(){
 }
 
 //export default App
-//export {App}
+//export {App}""
