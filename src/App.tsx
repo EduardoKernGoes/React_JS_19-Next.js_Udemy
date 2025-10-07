@@ -1,64 +1,30 @@
+import { Cabecalho } from './componentes/Cabecalho'
+import { Conteiners } from './componentes/Conteiners'
 import './styles/global.css'
 import './styles/tema.css'
 
 export function App(){
     return <>
 
-        <div className="container">
+        <Conteiners>
 
-            <div className="content">
-
-                <section>
-
-                    <p>LOGO</p>
-
-                </section>
+            <Cabecalho>
                 
-            </div>
-            
-        </div>
+                <h1>Logo</h1>
 
-        <div className="container">
+            </Cabecalho>
 
-            <div className="content">
+        </Conteiners>
 
-                <section>
+        <Conteiners>
 
-                    <p>MENU</p>
+            <Cabecalho>
 
-                </section>
+                <h1>Menu</h1>
                 
-            </div>
-            
-        </div>
+            </Cabecalho>
 
-        <div className="container">
-
-            <div className="content">
-
-                <section>
-
-                    <p>FORMULÁRIO</p>
-
-                </section>
-                
-            </div>
-            
-        </div>
-
-        <div className="container">
-
-            <div className="content">
-
-                <section>
-
-                    <p>RODAPÉ</p>
-
-                </section>
-                
-            </div>
-            
-        </div>
+        </Conteiners>
 
     </>
     
