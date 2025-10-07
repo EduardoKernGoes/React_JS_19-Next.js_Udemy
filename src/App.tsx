@@ -1,20 +1,67 @@
 import './styles/global.css'
 import './styles/tema.css'
 
-import { Cabecalho } from './componentes/Cabecalho'
-import { TimerIcon } from 'lucide-react'
-
 export function App(){
-    return (
-        <>
-            <Cabecalho>
-                Olá Mundo<button><TimerIcon /></button>
-            </Cabecalho>
-            <p>
-                Exemplo de paragrafo
-            </p>
-        </>
-    )
+    return <>
+
+        <div className="container">
+
+            <div className="content">
+
+                <section>
+
+                    <p>LOGO</p>
+
+                </section>
+                
+            </div>
+            
+        </div>
+
+        <div className="container">
+
+            <div className="content">
+
+                <section>
+
+                    <p>MENU</p>
+
+                </section>
+                
+            </div>
+            
+        </div>
+
+        <div className="container">
+
+            <div className="content">
+
+                <section>
+
+                    <p>FORMULÁRIO</p>
+
+                </section>
+                
+            </div>
+            
+        </div>
+
+        <div className="container">
+
+            <div className="content">
+
+                <section>
+
+                    <p>RODAPÉ</p>
+
+                </section>
+                
+            </div>
+            
+        </div>
+
+    </>
+    
 }
 
 //export default App
