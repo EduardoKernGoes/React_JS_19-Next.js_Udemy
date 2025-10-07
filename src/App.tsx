@@ -3,9 +3,14 @@ import { Conteiners } from './componentes/Conteiner'
 import { Logo } from './componentes/Logo'
 import { Menu } from './componentes/Menu'
 import { DefaultInput } from './componentes/DefaultInput'
+import { DefaultButton } from './componentes/DefaultButton'
+
 
 import './styles/global.css'
 import './styles/tema.css'
+import { Ciclos } from './componentes/Ciclos'
+import { PlayCircleIcon } from 'lucide-react'
+import { Rodape } from './componentes/Rodape'
 
 export function App(){
     return <>
@@ -50,18 +55,23 @@ export function App(){
 
                 <div className="formRow">
 
-                    <p>ciclos</p>
-                    <p>0 0 0 0 0 0 0</p>
+                    <Ciclos />
 
                 </div>
 
                 <div className="formRow">
 
-                    <button>Enviar</button>
+                    <DefaultButton icon={<PlayCircleIcon />}/>
 
                 </div>
 
             </form>
+
+        </Conteiners>
+
+        <Conteiners>
+            
+            <Rodape />
 
         </Conteiners>
 

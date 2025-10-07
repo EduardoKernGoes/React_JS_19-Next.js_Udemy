@@ -1,0 +1,30 @@
+.ciclos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    text-align: center;
+}
+
+.ciclosDots{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.ciclosDot{
+    width: 2rem;
+    height: 2rem;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.tempoTrabalho{
+    background: var(--warning);
+}
+
+.tempoDescansoCurto{
+    background: var(--primary);
+}
+
+.tempoDescansoLongo{
+    background: var(--info);
+}
