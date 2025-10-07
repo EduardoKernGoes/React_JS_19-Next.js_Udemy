@@ -1,5 +1,5 @@
 import { Cabecalho } from './componentes/Cabecalho'
-import { Conteiners } from './componentes/Conteiners'
+import { Conteiners } from './componentes/Conteiner'
 import './styles/global.css'
 import './styles/tema.css'
 
@@ -21,7 +21,7 @@ export function App(){
             <Cabecalho>
 
                 <h1>Menu</h1>
-                
+
             </Cabecalho>
 
         </Conteiners>

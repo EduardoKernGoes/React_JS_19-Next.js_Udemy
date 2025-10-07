@@ -1,4 +1,4 @@
-import styels from './Cabecalho.module.css'
+import styels from './styles.module.css'
 import React from 'react'
 
 type CabecalhoProps = {
