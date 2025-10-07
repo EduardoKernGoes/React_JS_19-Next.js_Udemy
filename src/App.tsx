@@ -1,6 +1,7 @@
 import { Cabecalho } from './componentes/Cabecalho'
 import { Conteiners } from './componentes/Conteiner'
 import { Logo } from './componentes/Logo'
+import { Menu } from './componentes/Menu'
 
 import './styles/global.css'
 import './styles/tema.css'
@@ -12,7 +13,7 @@ export function App(){
 
             <Cabecalho>
                 
-                <Logo></Logo>
+                <Logo />
 
             </Cabecalho>
 
@@ -22,7 +23,7 @@ export function App(){
 
             <Cabecalho>
 
-                <h1>Menu</h1>
+                <Menu />
 
             </Cabecalho>
 
