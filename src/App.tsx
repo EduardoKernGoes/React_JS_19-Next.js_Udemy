@@ -1,12 +1,12 @@
 import './styles/global.css'
-import './styles/tema.css'
+import './styles/theme.css'
 import { Home } from './pages/Home'
-import { TaskContextoProvider } from './contextos/TaskContexto/taskContextProvider'
+import { TaskContextProvider } from './contexts/TaskContext/taskContextProvider'
 
 export function App(){
     return(
-        <TaskContextoProvider>
+        <TaskContextProvider>
             <Home/>
-        </TaskContextoProvider>
+        </TaskContextProvider>
     )
 }

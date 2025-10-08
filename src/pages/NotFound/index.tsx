@@ -1,16 +1,16 @@
-import { Conteiners } from "../../componentes/Conteiner";
+import { Containers } from "../../components/Container";
 import { MainTemplate } from "../../templates/MainTemplate";
-import { Cabecalho } from "../../componentes/Cabecalho";
-import { HtmlGenerico } from "../../componentes/HtmlGenerico";
+import { Heading } from "../../components/Heading";
+import { GenericHtml } from "../../components/GenericHtml";
 
 export function NotFound() {
     return(
         <MainTemplate>
-            <Conteiners>
-                <HtmlGenerico>
-                    <Cabecalho>
+            <Containers>
+                <GenericHtml>
+                    <Heading>
                         404 - Página não encontrada 🚀
-                    </Cabecalho>
+                    </Heading>
                     <p>
                         Opa! Parece que a página que você está tentando acessar não existe.
                         Talvez ela tenha tirado férias, resolvido explorar o universo ou se
@@ -32,8 +32,8 @@ export function NotFound() {
                         Enquanto isso, fica aqui uma reflexão: "Se uma página não existe na
                         internet, será que ela existiu de verdade?" 🤔💭
                     </p>
-                </HtmlGenerico>
-            </Conteiners>
+                </GenericHtml>
+            </Containers>
         </MainTemplate>
         
     )

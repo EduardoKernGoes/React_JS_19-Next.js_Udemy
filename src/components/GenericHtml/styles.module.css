@@ -1,36 +1,36 @@
-.htmlGenerico h1{
+.genericHtml h1{
     font-size:3.2rem;
     margin-bottom: 1.6rem;
 }
 
-.htmlGenerico h2{
+.genericHtml h2{
     font-size:2.4rem;
     margin-bottom: 1.2rem;
 }
 
-.htmlGenerico h3{
+.genericHtml h3{
     font-size:2rem;
     margin-bottom: 1rem;
 }
 
-.htmlGenerico p{
+.genericHtml p{
     font-size:1.6rem;
     line-height: 1.6;
     margin-bottom: 1.6rem;
 }
 
-.htmlGenerico a{
+.genericHtml a{
     color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
 
-.htmlGenerico a:hover{
+.genericHtml a:hover{
     font-size:2.4rem;
     margin-bottom: 1.2rem;
 }
 
-.htmlGenerico ul{
+.genericHtml ul{
     padding-left: 2.4rem;
 }
 

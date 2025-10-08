@@ -2,23 +2,23 @@ import { HistoryIcon, SettingsIcon, HouseIcon, SunIcon, MoonIcon } from 'lucide-
 import styles from './styles.module.css'
 import { useState, useEffect } from 'react'
 
-type Temas = 'dark' | 'light'
+type Themes = 'dark' | 'light'
 
 export function Menu() {
 
-    const [theme, setTheme] = useState<Temas>(() => {
-        const storageTheme = (localStorage.getItem('theme') as Temas) || 'dark'
+    const [theme, setTheme] = useState<Themes>(() => {
+        const storageTheme = (localStorage.getItem('theme') as Themes) || 'dark'
         return storageTheme;
     })
 
-    const temaIcon = {
+    const iconTheme = {
 
         dark: <SunIcon />,
         light: <MoonIcon />
 
     }
 
-    function mudarTema(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>){
+    function changeTheme(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>){
         event.preventDefault()
 
         setTheme(prevTheme => {
@@ -43,8 +43,8 @@ export function Menu() {
         <a className={styles.menuLink} href="#" aria-label='Configurações' title='Configurações'>
             <SettingsIcon />
         </a>
-        <a className={styles.menuLink} href="#" aria-label='Mudar tema' title='Tema' onClick={mudarTema}>
-            {temaIcon[theme]}
+        <a className={styles.menuLink} href="#" aria-label='Mudar tema' title='Tema' onClick={changeTheme}>
+            {iconTheme[theme]}
         </a>
     </nav>
 }

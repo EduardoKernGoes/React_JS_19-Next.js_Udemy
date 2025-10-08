@@ -1,7 +1,7 @@
-import { Conteiners } from "../../componentes/Conteiner";
-import { Logo } from "../../componentes/Logo";
-import { Menu } from "../../componentes/Menu";
-import { Rodape } from "../../componentes/Rodape";
+import { Containers } from "../../components/Container";
+import { Logo } from "../../components/Logo";
+import { Menu } from "../../components/Menu";
+import { Footer } from "../../components/Footer";
 
 type MainTemplateProps = {
     children: React.ReactNode
@@ -11,19 +11,19 @@ export function MainTemplate({children}: MainTemplateProps){
     return(
     <>
 
-        <Conteiners>
+        <Containers>
             <Logo />
-        </Conteiners>
+        </Containers>
 
-        <Conteiners>
+        <Containers>
             <Menu />
-        </Conteiners>
+        </Containers>
 
         {children}
 
-        <Conteiners>
-            <Rodape />
-        </Conteiners>
+        <Containers>
+            <Footer />
+        </Containers>
 
     </>
     

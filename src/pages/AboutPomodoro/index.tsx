@@ -1,14 +1,14 @@
-import { Conteiners } from "../../componentes/Conteiner";
+import { Containers } from "../../components/Container";
 import { MainTemplate } from "../../templates/MainTemplate";
-import { Cabecalho } from "../../componentes/Cabecalho";
-import { HtmlGenerico } from "../../componentes/HtmlGenerico";
+import { Heading } from "../../components/Heading";
+import { GenericHtml } from "../../components/GenericHtml";
 
 export function AboutPomodoro() {
     return(
         <MainTemplate>
-            <Conteiners>
-                <HtmlGenerico>
-                    <Cabecalho>A Técnica Pomodoro 🍅</Cabecalho>
+            <Containers>
+                <GenericHtml>
+                    <Heading>A Técnica Pomodoro 🍅</Heading>
                     <p>
                         A Técnica Pomodoro é uma metodologia de produtividade criada por{' '}
                         <strong>Francesco Cirillo</strong>, que consiste em dividir o
@@ -117,8 +117,8 @@ export function AboutPomodoro() {
                     <p>
                         <em>"Foco total, sem pressa, sem pausa, só vai!"</em> 💪🧘‍♂️
                     </p>
-                </HtmlGenerico>
-            </Conteiners>
+                </GenericHtml>
+            </Containers>
         </MainTemplate>
     )
 }

@@ -1,5 +1,5 @@
 import { PlayCircleIcon } from "lucide-react";
-import { Ciclos } from "../Ciclos";
+import { Cycles } from "../Cycles";
 import { DefaultButton } from "../DefaultButton";
 import { DefaultInput } from "../DefaultInput";
 
@@ -19,7 +19,7 @@ export function MainForm(){
         </div>
 
         <div className="formRow">
-            <Ciclos />
+            <Cycles />
         </div>
 
         <div className="formRow">
