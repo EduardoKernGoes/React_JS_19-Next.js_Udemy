@@ -52,6 +52,21 @@ export function MainForm(){
 
         console.log(taskName)
     }
+    function handleInterruptTask() {
+        setState(prevState => {
+            return {
+                ...prevState,
+                activetask: null,
+                secondsRemaining: 0,
+                formattedSecondsRemaining: '00:00',
+                tsks: prevState.tasks.map(task => {
+                    if (prevState.activetask && prevState.activetask.id === task.id) {
+                        return{...task, interruptedDate: Date.now()}
+                    }
+                })
+            }
+        })
+    }
 
     return (
     <form onSubmit={handleCreateNewTask} className='form' action="">
@@ -83,6 +98,7 @@ export function MainForm(){
                     aria-label='Iniciar tarefa'
                     title='Iniciar'
                     icon={<PlayCircleIcon />}
+                    key={'botao_submit'}
                 />
             ) : (<DefaultButton
                     type='button'
@@ -90,6 +106,8 @@ export function MainForm(){
                     title='Interromper'
                     color='vermelho'
                     icon={<StopCircleIcon />}
+                    onClick={handleInterruptTask}
+                    key={'botao_button'}
                 />
             )}
         </div>
