@@ -7,10 +7,10 @@ import type { TaskModel } from "../../models/TaskModel";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { getNextCycle } from "../../utils/getNextCycle";
 import { getNextCycleType } from "../../utils/getNextCycleType";
-import { secondsToMinutes } from "../../utils/secondsToMinutes";
+import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
 
 export function MainForm(){
-    const { state, setState } = useTaskContext()
+    const { state, dispatch } = useTaskContext()
     const taskNameInput = useRef<HTMLInputElement>(null)
     const nextCycle = getNextCycle(state.currentCycle)
     const nextCycleType = getNextCycleType(nextCycle)
@@ -39,33 +39,12 @@ export function MainForm(){
 
         const secondsRemaining = newTask.duration *60
 
-        setState(prevState => {
-            return {
-                ...prevState,
-                activetask: newTask,
-                currentCycle: nextCycle,
-                secondsRemaining,
-                formattedSecondsRemaining: secondsToMinutes(secondsRemaining),
-                tasks: [...prevState.tasks, newTask]
-            }
-        })
+        dispatch({type: TaskActionTypes.START_TASK, payload: newTask})
 
         console.log(taskName)
     }
     function handleInterruptTask() {
-        setState(prevState => {
-            return {
-                ...prevState,
-                activetask: null,
-                secondsRemaining: 0,
-                formattedSecondsRemaining: '00:00',
-                tsks: prevState.tasks.map(task => {
-                    if (prevState.activetask && prevState.activetask.id === task.id) {
-                        return{...task, interruptedDate: Date.now()}
-                    }
-                })
-            }
-        })
+        dispatch({type: TaskActionTypes.INTERRUPT_TASK})
     }
 
     return (
@@ -77,7 +56,7 @@ export function MainForm(){
                 type='text'
                 placeholder='Digite Algo'
                 ref={taskNameInput}
-                disabled={!!state.activetask}
+                disabled={!!state.activeTask}
             />
         </div>
 
@@ -92,7 +71,7 @@ export function MainForm(){
         )}
 
         <div className="formRow">
-            {!state.activetask ? (
+            {!state.activeTask ? (
                 <DefaultButton
                     type='submit'
                     aria-label='Iniciar tarefa'
